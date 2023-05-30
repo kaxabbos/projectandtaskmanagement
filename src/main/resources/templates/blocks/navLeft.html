@@ -1,0 +1,61 @@
+<nav style="background: #595959" th:fragment="nav">
+    <div class="container-fluid d-flex flex-column p-0">
+        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
+           href="/index">
+            <div class="sidebar-brand-text mx-3"><span>ProjectAndTask</span></div>
+        </a>
+        <hr class="sidebar-divider my-0">
+        <ul class="navbar-nav text-light" id="accordionSidebar">
+            <li th:if="${role == 'MANAGER'}" class="nav-item">
+                <a class="nav-link" href="/projects">
+                    <span>Проекты</span>
+                </a>
+            </li>
+            <li th:if="${role == 'EMPLOYEE'}" class="nav-item">
+                <a class="nav-link" href="/tasks">
+                    <span>Задачи</span>
+                </a>
+            </li>
+            <li th:if="${role == 'ADMIN'}" class="nav-item">
+                <a class="nav-link" href="/stat">
+                    <span>Статистика</span>
+                </a>
+            </li>
+            <li th:if="${role != 'NOT'}" class="nav-item">
+                <a class="nav-link" href="/index">
+                    <span>Профиль</span>
+                </a>
+            </li>
+            <li th:if="${role == 'ADMIN'}" class="nav-item">
+                <a class="nav-link" href="/userAll">
+                    <span>Пользователи</span>
+                </a>
+            </li>
+            <li th:if="${role == 'ADMIN'}" class="nav-item">
+                <a class="nav-link" href="/userAdd">
+                    <span>Добавить сотрудника</span>
+                </a>
+            </li>
+            <li th:if="${role == 'NOT'}" class="nav-item">
+                <a class="nav-link" href="/login">
+                    <span>Вход</span>
+                </a>
+            </li>
+            <li th:if="${role == 'NOT'}" class="nav-item">
+                <a class="nav-link" href="/reg">
+                    <span>Регистрация</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">
+                    <span>О нас</span>
+                </a>
+            </li>
+            <li th:if="${role != 'NOT'}" class="nav-item">
+                <a class="nav-link" href="/logout">
+                    <span>Выход</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

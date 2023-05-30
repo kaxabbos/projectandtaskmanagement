@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>О нас</title>
+</head>
+
+<head th:insert="blocks/head :: head"></head>
+
+<body id="page-top">
+<div id="wrapper">
+    <nav style="background: #595959"
+         class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0 accent"
+         th:insert="blocks/navLeft :: nav"></nav>
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <div th:insert="blocks/navTop :: nav"></div>
+            <div class="container-fluid">
+                <h3 class="text-dark mb-1 pb-24">О нас</h3>
+                <div align="center">
+                    <iframe allowfullscreen="" frameborder="0" loading="lazy"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGz6HJDVY9fht_jGVCprEpRCwZ8PSsqhc&amp;q=Minsk&amp;zoom=11"
+                            width="75%" height="500"
+                            style="box-shadow: 0px 0px 6px;border-radius: 5px;border: 1px solid rgb(255,255,255);width: 100%;margin-top: 15px;height: 500px;"></iframe>
+                </div>
+                <div class="mb-3" align="justify">
+                    <p class="lead">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+                        architecto error illum iste laboriosam nihil numquam obcaecati, provident quaerat rem
+                        reprehenderit sit unde vero voluptas voluptatum! Facere mollitia natus omnis!
+                    </p>
+                    <p class="lead">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+                        odit, possimus. Accusamus architecto enim fuga labore officia provident voluptatibus. Architecto
+                        dicta facilis nemo non qui sapiente voluptatum. Dolorum, illum, sint!
+                    </p>
+                    <p class="lead">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur,
+                        earum laboriosam! Accusantium asperiores autem cupiditate distinctio dolor enim eos, ex
+                        explicabo ipsam itaque magni nobis porro reprehenderit, sit soluta velit!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/theme.js"></script>
+</body>
+
+</html>
